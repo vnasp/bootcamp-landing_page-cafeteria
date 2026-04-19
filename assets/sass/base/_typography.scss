@@ -7,14 +7,23 @@ body {
 }
 
 h1 {
-  font-size: $fs1;
-  line-height: $fs1;
+  font-size: $fs2;
+  line-height: $fs2;
   font-weight: lighter;
+
+  @include tablet {
+    font-size: $fs1;
+    line-height: $fs1;
+  }
 }
 
 h2 {
-  font-size: $fs2;
+  font-size: $fs3;
   font-weight: lighter;
+
+  @include tablet {
+    font-size: $fs2;
+  }
 }
 
 h3 {

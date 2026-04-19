@@ -1,65 +1,123 @@
 .box {
   &--amarillo {
-    @include box($amarillo, 150px, 150px);
+    @include box($amarillo, 100px, 100px);
     @include box_position(0, 0, 2);
+
+    @include tablet {
+      @include box($amarillo, 150px, 150px);
+    }
   }
 
   &--rojo {
-    @include box($rojo, 150px, 150px);
-    @include box_position(15px, -15px, 3);
+    @include box($rojo, 100px, 100px);
+    @include box_position(10px, -10px, 3);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: $fs2;
+    font-size: $fs3;
+
+    @include tablet {
+      @include box($rojo, 150px, 150px);
+      @include box_position(15px, -15px, 3);
+      font-size: $fs2;
+    }
   }
 
   &--azul {
-    @include box($azul, 50%, 250px);
+    @include box($azul, 100%, 200px);
     position: relative;
+
+    @include tablet {
+      width: 50%;
+      height: 250px;
+    }
   }
 
   &--cafeteria {
-    @include box_image("../img/img-1.png", $width: 100%, $height: 500px);
+    @include box_image("../img/img-1.png", $width: 100%, $height: 300px);
+
+    @include tablet {
+      height: 500px;
+    }
   }
 
   &--maquina {
-    @include box_image("../img/img-2.png", $width: 100%, $height: 300px);
+    @include box_image("../img/img-2.png", $width: 100%, $height: 200px);
+
+    @include tablet {
+      height: 300px;
+    }
   }
 
   &--granos {
-    @include box_image("../img/img-3.png", $width: 25%, $height: 180px);
-    @include box_position(40%, -50px, 2);
+    @include box_image("../img/img-3.png", $width: 25%, $height: 120px);
+    @include box_position(40%, -30px, 2);
+
+    @include tablet {
+      height: 180px;
+      left: -50px;
+    }
   }
 
   &--mapa {
-    @include box_image("../img/img-4.png", $width: 90%, $height: 250px);
-    @include box_position(-20px, -30px, 2);
+    @include box_image("../img/img-4.png", $width: 90%, $height: 180px);
+    @include box_position(-15px, -15px, 2);
+
+    @include tablet {
+      height: 250px;
+      bottom: -20px;
+      left: -30px;
+    }
   }
 
   &--titulo,
   &--conocenos {
-    padding: $sp5;
+    padding: $sp3;
+
+    @include tablet {
+      padding: $sp5;
+    }
   }
 
   &--titulo {
-    margin: $sp5;
+    margin: $sp3;
+
+    @include tablet {
+      margin: $sp5;
+    }
   }
 
   &--conocenos {
-    width:50%;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
   }
 
   &--caracteristicas {
-    @include box_position(0, 50%, 2);
+    position: relative;
     background-color: $blanco;
-    font-size: $fs4;
-    padding: $sp5;
+    font-size: $fs5;
+    padding: $sp3;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: start;
-    gap: 2rem;
-    width: 50%;
-    height: 150px;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+
+    @include desktop {
+      @include box_position(0, 50%, 2);
+      font-size: $fs4;
+      padding: $sp5;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 2rem;
+      width: 50%;
+      height: 150px;
+    }
   }
 
 }

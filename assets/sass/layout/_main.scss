@@ -1,19 +1,37 @@
 .main {
-  margin: $sp5;
+  margin: $sp3;
+
+  @include tablet {
+    margin: $sp5;
+  }
 
   &__superior,
   &__inferior {
     display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   &__superior--izquierdo,
   &__inferior--izquierdo {
-    width: 70%;
-    display:flex;
+    width: 100%;
+    display: flex;
+
+    @include desktop {
+      width: 70%;
+    }
   }
+
   &__superior--derecho,
   &__inferior--derecho {
-    width:30%;
+    width: 100%;
     position: relative;
+
+    @include desktop {
+      width: 30%;
+    }
   }
 }

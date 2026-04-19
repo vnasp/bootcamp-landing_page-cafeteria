@@ -3,6 +3,8 @@
   font-family: $mono-font;
   font-size: $fs5;
   border: 1px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
   &--primary {
     background-color: $blanco;

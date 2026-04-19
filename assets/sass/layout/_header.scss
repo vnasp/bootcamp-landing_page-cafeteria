@@ -2,18 +2,30 @@
 
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0 $sp5;
-  margin: 0 $sp5;
+  gap: $sp3;
+  padding: $sp3;
+  margin: 0 $sp3;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 $sp5;
+    margin: 0 $sp5;
+  }
 
   &__navbar {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 3rem;
+    gap: 1.5rem;
     color: $gris-medio;
+
+    @include tablet {
+      gap: 3rem;
+    }
   }
 
   &__logo {

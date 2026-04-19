@@ -1,10 +1,8 @@
 # Cafetería Agere
 
-Landing page para una cafetería con diseño tipo bento box, usando cajas decorativas superpuestas con colores sólidos e imágenes de fondo.
+Proyecto desarrollado como desafío del **Bootcamp Frontend Developer de Talento Digital para Chile**. El objetivo era un landing page para una cafetería con diseño tipo bento box, usando cajas decorativas superpuestas con colores sólidos e imágenes de fondo.
 
-## Vista previa
-
-[Ver en GitHub Pages](https://vnasp.github.io/bootcamp-landing_page-cafeteria/)
+> **Nota:** Este es un proyecto académico de maquetación, no un blog funcional.
 
 ## Tecnologías
 
@@ -31,7 +29,3 @@ assets/sass/
 # Compilar SCSS en modo watch
 npm run sass
 ```
-
-## Contexto
-
-Proyecto desarrollado como desafío del **Bootcamp Frontend Developer de Talento Digital para Chile** (2024).
